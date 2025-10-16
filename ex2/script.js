@@ -54,7 +54,9 @@ class FuncionarioController {
     }
 
     init(){
-        document.getElementById("btnCadastrar").addEventListener("click", (event) => this.salvar(event));
+        document.getElementById("btnCadastrar").addEventListener("click", function(event) {
+            controller.salvar(event);
+        });
     }
 
     salvar(e){
@@ -84,7 +86,7 @@ class FuncionarioController {
         const tabela = document.getElementById("tabela");
         tabela.innerHTML = "";
 
-        this.funcionarios.forEach((funcionario, index) => {
+        this.funcionarios.forEach(function(funcionario, index) {
             const row = tabela.insertRow();
             row.insertCell(0).innerText = index + 1;
             row.insertCell(1).innerText = funcionario.getNome();
@@ -95,13 +97,13 @@ class FuncionarioController {
             const btnEditar = document.createElement("button");
             btnEditar.innerText = "Editar";
             btnEditar.type = "button";
-            btnEditar.onclick = () => { this.editar(index); };
+            btnEditar.onclick = function() { controller.editar(index); };
             row.insertCell(5).appendChild(btnEditar);
 
             const btnExcluir = document.createElement("button");
             btnExcluir.innerText = "Excluir";
             btnExcluir.type = "button";
-            btnExcluir.onclick = () => { this.excluir(index); };
+            btnExcluir.onclick = function() { controller.excluir(index); };
             row.insertCell(5).appendChild(btnExcluir);
         });
     }
