@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Funcionário</title>
+</head>
+<body>
+    <a href="/index.html">Home</a>
+    <hr>
+    <form action="" method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        <br> <br>
+        <label for="idade">Idade: </label>
+        <input type="number" id="idade" name="idade" placeholder="Digite sua idade" required>
+        <br> <br>
+        <label for="cargo">Cargo: </label>
+        <input type="text" id="cargo" name="cargo" placeholder="Digite seu cargo" required>
+        <br> <br>
+        <label for="salario">Salário: </label>
+        <input type="number" id="salario" name="salario" placeholder="Digite seu salário" required>
+        <br> <br>
+    </form>
+    <input id="btnCadastrar" type="submit" value="Cadastrar">
+    <input id="btnProcurarPorNome" type="button" value="Procurar por Nome">
+    <input id="btnListar" type="button" value="Listar Todos">
+    <table border =".1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th bgcolor="gray" width="50">#</th>
+                <th bgcolor="gray" width="130">Nome</th>
+                <th bgcolor="gray" width="130">Idade</th>
+                <th bgcolor="gray" width="130">Cargo</th>
+                <th bgcolor="gray" width="130">Salário</th>
+            </tr>
+        </thead>
+        <tbody id="tabela">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
